@@ -99,9 +99,9 @@ esac
 
 
 # figure out URL
-ZIP_FILENAME="ipfs_${version}_${GOOS}-${GOARCH}.zip"
-BIN_PATH="github.com/ipfs/go-ipfs/cmd/ipfs"
-URL="https://gobuilder.me/get/$BIN_PATH/$ZIP_FILENAME"
+ZIP_FILENAME="go-ipfs_${version}_${GOOS}-${GOARCH}.zip"
+BIN_PATH="go-ipfs"
+URL="http://sardines.oss-cn-beijing.aliyuncs.com/$BIN_PATH/$ZIP_FILENAME"
 
 cwd=$(pwd)
 tmpdir="/tmp/install_ipfs"
@@ -120,4 +120,4 @@ cd "$cwd"
 
 # installing
 log "installing to $dstpath"
-mv "$tmpdir/ipfs/ipfs" "$dstpath" 2>&1 >/dev/null || die "failed to move ipfs/ipfs to $dstpath"
+mv "$tmpdir/go-ipfs/ipfs" "$dstpath" 2>&1 >/dev/null || die "failed to move ipfs/ipfs to $dstpath"
